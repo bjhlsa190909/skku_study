@@ -1,3 +1,5 @@
-git practice 레포지토리
-git vscode 연결 
-git training
+git init
+git branch -M main
+git status #gst
+git commit -m "~ commit"
+git push origin main
