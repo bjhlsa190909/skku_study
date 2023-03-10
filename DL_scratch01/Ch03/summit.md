@@ -44,6 +44,7 @@
  <img width="60%" height="300" alt="fig 3-6" src="https://user-images.githubusercontent.com/125746059/224339799-b89566ba-0a25-4a18-aeab-8531c6f9c10a.png">
 
 3.2.4 시그모이드 함수 구현하기 
+
  
  <img width="60%" height="300" alt="fig 3-7" src="https://user-images.githubusercontent.com/125746059/224340247-6d7a1e99-b6db-4603-bb33-9b806e1cc916.png">
 
