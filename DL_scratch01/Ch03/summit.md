@@ -116,6 +116,23 @@
  
  3.4.3 구현 정리 
  
+ 3.5 출력층 설계하기
+ -------------------
+ 신경망은 분류와 회귀 모두에 이용될 수 있으며, 일반적으로 회귀에는 항등함수, 분류에는 소프트맥스 함수를 사용함. 
+ 
+ 3.5.1 항등 함수와 소프트맥스 함수 구현하기 
+ 
+ <img width="300" alt="fig 3-21" src="https://user-images.githubusercontent.com/125746059/224464198-13ef0f7b-b9e0-4b13-9946-00e5271bdea7.png">
+
+ 소프트맥스 함수 식
+ 
+ <img width="300" alt="e 3 10" src="https://user-images.githubusercontent.com/125746059/224464230-a3a88278-6fdc-4000-8a25-6ee77d3431c5.png">
+
+ exp(x)는 자연상수 e의 지수함수를, n은 출력층의 노드의 수, yk는 그 중 k번쨰 출력임을 의미함. 즉, 소프트맥스 함수의 분자는 입력 신호 ak의 지수 함수, 분모는 모든 입력 신호의 지수 함수의 합으로 구성됨. 
+ 
+ <img width="300" alt="fig 3-22" src="https://user-images.githubusercontent.com/125746059/224464315-6c5ed0c7-4dd9-4ca3-af85-c734f22034f6.png">
+
+ 
  
 
  
