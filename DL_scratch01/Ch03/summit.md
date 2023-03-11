@@ -80,3 +80,43 @@
 
  상기에서 A가 2차원 행렬, B가 1차원 배열일 때에도 대응하는 차원의 원소 수를 일치시켜야함. 
  
+ 3.3.3 신경망에서의 행렬 곱
+ 
+ <img width="400" alt="fig 3-14" src="https://user-images.githubusercontent.com/125746059/224462928-5f0f0ad6-cc80-43f8-85ec-f02c4cfbc7dd.png">
+
+ 3.4 3층 신경망 구현하기
+ -----------------------
+ <img width="300" alt="fig 3-15" src="https://user-images.githubusercontent.com/125746059/224462960-9c719b42-adec-4ebe-a69c-101ae47f172c.png">
+
+ 3.4.1 표기법 설명
+ 
+ <img width="300" alt="fig 3-16" src="https://user-images.githubusercontent.com/125746059/224463033-fca22040-e22f-4891-97ab-09fad440b5ea.png">
+
+ 
+3.4.2 각 층의 신호 전달 구현하기 
+
+<img width="400" alt="fig 3-17" src="https://user-images.githubusercontent.com/125746059/224463120-7e31bd12-f260-4376-9d57-b4a3d8a6a8af.png">
+
+<img width="300" alt="e 3 8" src="https://user-images.githubusercontent.com/125746059/224463176-13e90a44-3b54-4d63-8163-c26134b8ca86.png">
+
+<img width="300" alt="e 3 9" src="https://user-images.githubusercontent.com/125746059/224463183-65517481-e7c5-4faa-a401-59f25d369b69.png">
+
+ 첫번째 식은 입력을 받아 가중치를 곱한 a1 노드 의 값을 의미하며, 1층의 가중치 부분을 두번째 식과 같이 간소화 할 수 있음. 
+ 
+ <img width="300" alt="fig 3-18" src="https://user-images.githubusercontent.com/125746059/224463360-4f0bcccf-50d5-4416-829c-33ab4539bd28.png">
+ 
+ 위 그림은 입력층에서 1층으로의 신호 전달을 표현하고 있으며, 하단의 그림은 1층에서 2층으로의 신호전달을 나타내고 있음.(활성화 함수로 시그모이드 함수 이용) 
+ 
+ <img width="300" alt="fig 3-19" src="https://user-images.githubusercontent.com/125746059/224463397-34b19e17-577f-4ade-ba5a-f18737f23e91.png">
+
+<img width="300" alt="fig 3-20" src="https://user-images.githubusercontent.com/125746059/224463473-1784cc54-eb4c-425e-8ff1-3aab0a794535.png">
+
+ 2층에서 출력층으로의 신호 전달을 위 그림은 표현하고 있고, 기존 층들에서 이뤄졌던 것과의 유일한 차이점은 활성화 함수가 다르다는 것임. (항등 함수)
+ (출력층의 활성화 함수는 문제의 성질에 따라 다르게 정함. 예를 들어, 회귀에서는 항등함수를, 2클래스 분류에는 시그모이드 함수를, 다중 클래스 분류에는 소프트맥스 함수를 사용하는 것이 일반적임)
+ 
+ 3.4.3 구현 정리 
+ 
+ 
+
+ 
+ 
