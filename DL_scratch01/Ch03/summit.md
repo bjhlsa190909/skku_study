@@ -132,6 +132,16 @@
  
  <img width="300" alt="fig 3-22" src="https://user-images.githubusercontent.com/125746059/224464315-6c5ed0c7-4dd9-4ca3-af85-c734f22034f6.png">
 
+ 3.5.2 소프트맥스 함수 구현시 주의점
+ 
+ 앞서 구현한 softmax() 함수 코드는 지수함수를 사용하기에 컴퓨터로 계산시 오버플로 문제가 발생하여 수치가 불안정해지는 문제가 발생함. 
+ 
+ 이 문제를 해결하도록 소프트맥스 함수 구현을 개선해보고자 함. 
+ 
+ <img width="300" alt="e 3 11" src="https://user-images.githubusercontent.com/125746059/224464649-4bcc7642-9e6f-4202-a71b-fbd1cf3481f6.png">
+ 
+ 
+
  
  
 
