@@ -66,6 +66,20 @@
 
  <img width="200" alt="e 3 7" src="https://user-images.githubusercontent.com/125746059/224449157-d977e728-aac1-47bd-b75b-dc4b720c2edb.png">
 
+ 3.3 다차원 배열의 계산
+ ---------------------
+ 3.3.1 다차원 배열
  
+ 한 줄로 늘어선 것, 직사각형, 3차원으로 늘어놓은 것 등 N차원으로 나열하는 것 통틀어 다차원 배열이라 함. 
+ (특히 2차원 배열은 행렬matrix라고 부름)
  
+ 3.3.2 행렬의 곱
+ 
+ <img width="300" alt="fig 3-12" src="https://user-images.githubusercontent.com/125746059/224451123-fbd5bffe-6483-4aa7-af1e-64661f1b0bed.png">
+
+ 행렬의 곱에서는 대응하는 차원의 원소 수를 일치시켜야 함. 
+ 
+ <img width="300" alt="fig 3-13" src="https://user-images.githubusercontent.com/125746059/224451213-e238d8c1-b74f-4bf9-8218-96700a516474.png">
+
+ 상기에서 A가 2차원 행렬, B가 1차원 배열일 때에도 대응하는 차원의 원소 수를 일치시켜야함. 
  
