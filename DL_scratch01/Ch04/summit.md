@@ -27,9 +27,20 @@
 
 <img width="169" alt="e 4 2" src="https://user-images.githubusercontent.com/125746059/229115249-3c305647-15ab-477e-bfca-0fa1489a8ddc.png">
 
-<img width="400" height='300 alt="fig 4-3" src="https://user-images.githubusercontent.com/125746059/229115824-ef7b69a6-d6d1-4fd3-99fa-089bf028e32c.png">
+<img width="400" height='300' alt="fig 4-3" src="https://user-images.githubusercontent.com/125746059/229115824-ef7b69a6-d6d1-4fd3-99fa-089bf028e32c.png">
                          
 교차 엔트로피 오차 또한 정답일 때의 출력(yk)이 전체 값을 결정하게 되고, 정답에 해당하는 yk값이 작을수록 오차는 커지게 됨. 
+
+4.2.3 미니배치 학습
+
+<img width="248" alt="e 4 3" src="https://user-images.githubusercontent.com/125746059/229117648-696bbd6f-2d58-4861-8521-6c05f26fc4be.png">
+
+위 식은 전체 데이터 N개에 대한 평균 손실 함수를 구하는 식임. 
+
+모든 데이터를 대상으로 손실함수의 합을 구하면 시간이 오래 걸리기에 이 경우 데이터 일부를 추려 전체의 '근사치'로 이용할 수 있는데, 이 중 일부를 '미니배치(mini-batch)'라고 함.
+(예컨데 MNIST 데이터셋의 훈련데이터 6만장 중 100장만 무작위로 뽑아 학습함)
+
+
                          
                          
 
