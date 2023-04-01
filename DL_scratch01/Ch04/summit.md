@@ -90,6 +90,7 @@ def gradient_descent(f, init_x, lr=0.01, step_num = 100):
 
 4단계(반복) : 1~3단계를 반복함. 
 
+
 상기와 같이 신경망 학습이 이뤄지는 순서로서 데이터를 무작위로 선정하기 때문에 확률적 경사하강법(Stochastic gradient descent)라고 부름. 
 
 
