@@ -54,6 +54,7 @@
 
 (미분 값 앞에 붙어있는 기호는 eta라고 표현되며 갱신하는 양을 뜻하고 신경망 학습에서는 학습률learning rate로 표현됨)
 
+ex) 예시 코드 구현
 ```python
 
 def gradient_descent(f, init_x, lr=0.01, step_num = 100):
@@ -68,6 +69,10 @@ def gradient_descent(f, init_x, lr=0.01, step_num = 100):
 # 인수 f는 최적화하려는 함수, init_x는 초기값, lr 는 학습률, stem_num 은 경사법에 따른 반복 횟수를 의미함. 
 
 ```
+
+여기서 학습률과 같은 매개변수를 하이퍼 파라미터(hyper parameter)라고 함. 이 매개변수는 사람이 직접 설정해야 하며, 일반적으로는 여러 시험을 통해 가장 잘 학습하는 값을 찾는 과정을 거쳐야 함. 
+
+4.4.2 신경망에서의 기울기
 
 
                       
