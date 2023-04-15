@@ -85,7 +85,7 @@ class Relu:
         
     def forward(self, x):
         self.mask = (x <= 0)    # mask라는 인스턴스 변수를 설정. x값이 0이하는 False, 0이상은 True를 유지함. 
-        out = x.copy()    # x배열 자체를 직접 조작하지 않고, 복사된 배열을 이용& 중간 계산 결과를 저장하기 위해서임. 
+        out = x.copy()          # x배열 자체를 직접 조작하지 않고, 복사된 배열을 이용& 중간 계산 결과를 저장하기 위해서임. 
         out[self.mask] = 0
         
         return out
