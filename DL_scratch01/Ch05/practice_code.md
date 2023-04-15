@@ -114,6 +114,49 @@ class Sigmoid:
 
 <img width="291" alt="fig 5-22" src="https://user-images.githubusercontent.com/125746059/232256326-714b480f-1289-4751-aa0c-a8ca2157fa1e.png">
 
+4. Affine/Softmax 계층 구현
+
+기본적인 신경망 순전파의 흐름이 가중치 신호의 총합(Y=np.dot(X, W) + B)을 활성화함수(sigmoid, relu 등)로 변환하여 다음 층으로 전파하는 것이고, 여기서 수행되는 행렬의 곱이 어파인의 기본적인 concept임. 
+
+```python
+
+class Affine:
+    def __init__(self, W, b):
+        self.W = W
+        slef.b = b
+        self.x = x
+        self.dW = None
+        self.db = None
+        
+    def forward(self, x):
+        self.x = x    # 중간 연산 결과 값들을 그때마다 기억하는 과정
+        out = np.dot(x, self.W) + self.b
+        
+        return out
+        
+    def backward(self, dout):
+        dx = np.dot(dout, self.W.T)    # T는 주어진 행렬을 전치행렬로 바꾸는 역할.
+        self.dW = np.dot(self.x.T, dout)
+        self.db = np.sum(dout, axit = 0)
+        
+        return dx
+
+class SoftmaxWithLoss:
+    def __init__(self):
+        self.loss = None
+        self.y = None    # softmax 출력값
+        self.t = None    # 정답 레이블(t)(원-핫 벡터)
+        
+    def forward(self, x, t):
+        self.t = t
+        self.y = softmax(x)    
+        self.t = cross_entropy_error(self.y, self.t)
+        return self.loss
+        
+    def backward(self, dout=1):
+        batch_size = self.t.shape[0]    # 
+        
+```
 
 
 
