@@ -102,7 +102,46 @@ class AdaGrad:
 
 6.2 가중치의 초기값
 
+hidden layer(은닉층)의 분포를 관찰하여 가중치의 초기값에 따라 활성화 값이 어떻게 변화하는지 살펴보면 하기와 같이 구현됨.
+
+```python
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))  # 은닉층의 활성화함수로 시그모이드 사용
+    
+x = np.random.randn(1000, 100) # 1000 x 100 의 입력데이터(난수_정규분포) 생성
+node_num = 100
+hidden_layer_size = 5
+activations = {}
+
+for i in range(hidden_layer_size):
+    if i != 0:
+        x = activations[i-1]
+        
+    w = np.random.randn(node_num, node_num) * 1 # 표준편차가 1인 경우 상정
+        
+    a = np.dot(x, w)
+    z = sigmoid(a)
+    activations[i] = z
+
+for i, a in activations.items():
+    plt.subplot(1, len(activations), i+1)
+    plt.title(str(i+1) + "-layer")
+    plt.hist(a.flatten(), 30, range=(0,1))
+
+```
+![image](https://github.com/bjhlsa190909/skku_study/assets/125746059/59dc9266-18b3-4f02-bd14-018200192d82)
+
+각 층의 활성화 값들이 0와 1에 치우쳐 분포되는 모양새를 보임(시그모이드 함수의 출력값이 0에 가까워지자 그 미분은 0에 다가감_기울기 소실문제)
+
+위에서 구현한 값 중에 가중치에 곱해진 표준편차를 0.01로 수정하여 그래프를 표현하면 아래와 같음.
+
+![image](https://github.com/bjhlsa190909/skku_study/assets/125746059/1bf47e96-187c-4c25-b50a-3dfb08ad066d)
+
+0.5 부근에 집중된 값의 분포를 보여 기울기 소실 문제가 발생하지 않았으나 표현력 관점에서 문제가 있음(뉴런을 여러개로 둔 의미가 없어짐)
 
 
-      
 
