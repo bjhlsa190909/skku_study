@@ -143,5 +143,31 @@ for i, a in activations.items():
 
 0.5 부근에 집중된 값의 분포를 보여 기울기 소실 문제가 발생하지 않았으나 표현력 관점에서 문제가 있음(뉴런을 여러개로 둔 의미가 없어짐)
 
+Xavier초기값 사용(일반적인 딥러닝 프레임워크에서 표준적으로 이용하고 있음)
+>> 이 초기값을 표현한 논문에서는 각 층의 활성화 값들을 광범위하게 분포시킬 목적으로 가중치의 적절한 분포를 찾고자 하였으며, 앞 계층의 노드가 n개라면 표준편차가 1 / np.sqrt(n) 이라는 결론을 이끌어 냄. 
 
+![image](https://github.com/bjhlsa190909/skku_study/assets/125746059/f9704f85-ce99-4d00-8760-8a0495dd5d4a)
+
+<img width="400" alt="fig 6-12" src="https://github.com/bjhlsa190909/skku_study/assets/125746059/d5127a40-e257-4d45-807d-12013ff2ea14">
+
+Relu를 활성화 함수로 사용할 떄의 초기값은 주로 He 초기값을 이용함. He초기값은 앞 계층의 노드 개수가 n개 일때, 표준편차가 2 / np.sqrt(n) 을 사용하는데, 이는 Relu함수가 음의 영역에서 0이라 더 넓게 분포시키기 위해 2배의 계수를 사용하는 것으로 해석될 수 있음. 
+
+6.2.4 MNIST 데이터셋으로 본 가중치 초기값 비교
+
+<img width="400" alt="fig 6-15" src="https://github.com/bjhlsa190909/skku_study/assets/125746059/7fcfaa3e-3afb-4265-aaec-528654db9fcf">
+
+std가 0.01인 경우에는 학습이 거의 이뤄지지 않았고, Xavier나 He 초기값은 학습이 순조롭게 이뤄짐.
+
+6.3 배치 정규화
+
+기본적인 아이디어는 각 층에서의 활성화 값이 적당히 분포되도록 조정하는 것에 있음. 
+
+장점
+>> 학습 속도 개선, 초기 값에 크게 의존하지 않음, 오버피팅 억제(드롭아웃 필요성 감소) 
+
+<img width="647" alt="fig 6-16" src="https://github.com/bjhlsa190909/skku_study/assets/125746059/232f0ee9-845a-4e85-96db-47cf05f77dbb">
+
+<img width="207" alt="e 6 7" src="https://github.com/bjhlsa190909/skku_study/assets/125746059/6296da4c-7270-404f-b2ea-98bf346d9f37">
+
+결과적으로 각 미니배치의 입력 데이터를 평균 0, 분산 1인 데이터로 변환하는 작업을 수행하여 데이터 분포가 덜 치우치도록 함(이 처리를 활성화 함수의 앞 또는 뒤 중 어디에 넣을지에 대한 논의와 실험 진행중)
 
