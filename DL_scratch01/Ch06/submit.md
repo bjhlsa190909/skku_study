@@ -163,11 +163,10 @@ std가 0.01인 경우에는 학습이 거의 이뤄지지 않았고, Xavier나 H
 기본적인 아이디어는 각 층에서의 활성화 값이 적당히 분포되도록 조정하는 것에 있음. 
 
 장점
->> 학습 속도 개선, 초기 값에 크게 의존하지 않음, 오버피팅 억제(드롭아웃 필요성 감소) 
+학습 속도 개선, 초기 값에 크게 의존하지 않음, 오버피팅 억제(드롭아웃 필요성 감소) 
 
 <img width="647" alt="fig 6-16" src="https://github.com/bjhlsa190909/skku_study/assets/125746059/232f0ee9-845a-4e85-96db-47cf05f77dbb">
 
-<img width="207" alt="e 6 7" src="https://github.com/bjhlsa190909/skku_study/assets/125746059/6296da4c-7270-404f-b2ea-98bf346d9f37">
-
 결과적으로 각 미니배치의 입력 데이터를 평균 0, 분산 1인 데이터로 변환하는 작업을 수행하여 데이터 분포가 덜 치우치도록 함(이 처리를 활성화 함수의 앞 또는 뒤 중 어디에 넣을지에 대한 논의와 실험 진행중)
 
+<img width="300" alt="e 6 7" src="https://github.com/bjhlsa190909/skku_study/assets/125746059/6296da4c-7270-404f-b2ea-98bf346d9f37">
