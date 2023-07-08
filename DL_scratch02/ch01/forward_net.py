@@ -1,5 +1,3 @@
-```python
-
 import numpy as np
 
 class Sigmoid:
@@ -17,4 +15,4 @@ class Affine:
     W, b = self.params
     out = np.matmul(x, W) + b
     return out
-```
+
