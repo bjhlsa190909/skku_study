@@ -16,3 +16,16 @@ class Affine:
     out = np.matmul(x, W) + b
     return out
 
+class TwoLayerNet:
+  def __init__(self, input_size, hidden_size, output_size):
+    I, H, O = input_size, hidden_size, output_size
+
+    #가중치와 편향 초기화
+    W1 = np.random.randn(I, H)
+    b1 = np.random.randn(H)
+    W2 = np.random.randn(H, O)
+    b1 = np.random.randn(O)
+
+    #계층 생성
+    self.layers = [
+      
