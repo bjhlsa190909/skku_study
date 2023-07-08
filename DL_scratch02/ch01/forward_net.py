@@ -28,4 +28,18 @@ class TwoLayerNet:
 
     #계층 생성
     self.layers = [
+      Affine(W1, b1),
+      Sigmoid(),
+      Affine(W2, b2)
+    ]
+
+    #모든 가중치 리스트에 모으기
+    self.params = []
+    for layer in self.layers:
+      self.params += layer.params
+
+  def predict(self, x):
+    for layer in self.layers:
+      x = layer.forward(x)
+    return x
       
