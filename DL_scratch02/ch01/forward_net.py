@@ -24,7 +24,7 @@ class TwoLayerNet:
     W1 = np.random.randn(I, H)
     b1 = np.random.randn(H)
     W2 = np.random.randn(H, O)
-    b1 = np.random.randn(O)
+    b2 = np.random.randn(O)
 
     #계층 생성
     self.layers = [
