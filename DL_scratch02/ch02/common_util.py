@@ -9,8 +9,8 @@ def preprocess(text):
   for word in words:
     if word not in word_to_id:
       new_id = len(word_to_id)
-      word_to_id(word) = new_id
-      id_to_word(new_id) = word
+      word_to_id[word] = new_id
+      id_to_word[new_id] = word
 
   corpus = np.array([word_to_id[w] for w in words])
 
