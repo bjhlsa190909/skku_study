@@ -61,9 +61,9 @@ def most_similar(query, word_to_id, id_to_word, word_matrix, top=5):
   #코사인 유사도를 기준으로 내림차순으로 출력
   count = 0
   for i in (-1 * similarity).argsort():
-    if id_to_word[i] = query:
+    if id_to_word[i] == query:
       continue
-    print('%s  %s' % (id_to_word[i], similarity[i])
+    print('%s  %s' % (id_to_word[i], similarity[i]))
 
     count += 1
     if count >= top:
